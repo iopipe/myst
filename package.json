@@ -12,7 +12,9 @@
     "docker-build": "docker build -t quay.io/opsee/myst:latest .",
     "docker-push": "docker push quay.io/opsee/myst:latest",
     "docker-publish": "npm run docker-build && npm run docker-push",
-    "docker-run": "docker run -p 9098:9098 quay.io/opsee/myst"
+    "docker-run": "docker run -p 9098:9098 quay.io/opsee/myst",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -40,6 +42,8 @@
     "restify": "^4.0.3",
     "universal-analytics": "^0.3.10",
     "winston": "^2.1.1",
-    "yeller_node": "0.0.7"
-  }
+    "yeller_node": "0.0.7",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
